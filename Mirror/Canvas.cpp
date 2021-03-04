@@ -27,6 +27,13 @@ void Canvas::onDraw() {
 
 }
 
+void Canvas::onCreate() {
+	BasicWindow::onCreate();
+
+	SetWindowText(getHWND(), L"Canvas");
+}
+}
+
 void Canvas::onLButtonDown(UINT nFlags, int x, int y)
 {
 	MYPOINT* pt = new MYPOINT();

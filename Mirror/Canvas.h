@@ -27,5 +27,6 @@ public:
 private:
     vector<MYPOINT*> points;
 
+    void onCreate();
 };
 

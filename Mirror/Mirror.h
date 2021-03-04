@@ -8,6 +8,6 @@ public:
     ~Mirror();
 
     void onDraw();
-
+    void onCreate();
 };
 

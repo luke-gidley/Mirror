@@ -14,3 +14,9 @@ void Mirror::onDraw() {
 
 	BasicWindow::onDraw();
 }
+
+void  Mirror::onCreate() {
+	BasicWindow::onCreate();
+
+	SetWindowText(getHWND(), L"Mirror");
+}

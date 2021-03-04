@@ -17,4 +17,11 @@ void BasicWindow::onDraw()
     EasyGraphics::onDraw();
 }
 
+void BasicWindow::onCreate()
+{
+    EasyGraphics::onCreate();
+
+    SetWindowText(getHWND(), L"Mirror, Mirror");
+}
+
 //wah

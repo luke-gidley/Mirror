@@ -8,6 +8,8 @@ public:
 	BasicWindow(HINSTANCE hInstance, int width, int height);
 	~BasicWindow();
 
+	virtual void onCreate();
+
 	void setWindowPosition(int x, int y);
 
 	virtual void onDraw();
