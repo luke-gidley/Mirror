@@ -1,13 +1,15 @@
 #pragma once
 #include "BasicWindow.h"
+
+
 class Mirror :
     public BasicWindow
 {
 public:
-    Mirror(HINSTANCE hInstance, int width, int height);
+    Mirror(HINSTANCE hInstance, int width, int height, ImageData* imagedata);
     ~Mirror();
 
-    void onDraw();
-    void onCreate();
+    virtual void onDraw();
+    virtual void onCreate();
 };
 

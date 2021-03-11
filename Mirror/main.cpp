@@ -16,13 +16,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	const int WIDTH = 400;
 	const int HEIGHT = 800;
 
+
+	ImageData* imagedata = new ImageData();
+
 	BasicWindow* windows[1 + NO_OF_MIRRORS];
-	windows[0] = new Canvas(hInstance, WIDTH, HEIGHT);
+	windows[0] = new Canvas(hInstance, WIDTH, HEIGHT, imagedata);
 	windows[0]->setWindowPosition(LEFT, TOP);
 
 	for (int i = 1; i <= NO_OF_MIRRORS; i++)
 	{
-		windows[i] = new Mirror(hInstance, WIDTH, HEIGHT);
+		windows[i] = new Mirror(hInstance, WIDTH, HEIGHT, imagedata);
 		windows[i]->setWindowPosition(LEFT+i*WIDTH, TOP);
 
 	}
@@ -37,6 +40,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		delete windows[i];
 	}
 
+	delete imagedata;
 	return 0;
 
 }

@@ -142,6 +142,7 @@
     <ClCompile Include="BasicWindow.cpp" />
     <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="EasyGraphics.cpp" />
+    <ClCompile Include="ImageData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mirror.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="BasicWindow.h" />
     <ClInclude Include="Canvas.h" />
     <ClInclude Include="EasyGraphics.h" />
+    <ClInclude Include="ImageData.h" />
     <ClInclude Include="Mirror.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
