@@ -6,7 +6,7 @@ class BasicWindow :
 {
 public:
 
-	BasicWindow(HINSTANCE hInstance, int width, int height, ImageData* imagedata);
+	BasicWindow(HINSTANCE hInstance, int width, int height);
 	~BasicWindow();
 
 	virtual void onCreate();
@@ -19,11 +19,11 @@ public:
 
 protected:
 	void createWindow(HINSTANCE hInstance, int width, int height);
-	ImageData* getImageData() const;
+
 	
 
 private:
-	ImageData* imagedata;
+
 };
 
 inline void BasicWindow::setWindowPosition(int x, int y)
@@ -40,15 +40,8 @@ inline void BasicWindow::close()
 inline void BasicWindow::createWindow(HINSTANCE hInstance, int width, int height)
 {
 	create(hInstance, width, height, 50, false);
-	imagedata->registerRedrawCallback(getHWND());
+	ImageData::getImageData()->registerRedrawCallback(getHWND());
 }
 
-/*inline void BasicWindow::drawImageData()
-{
-	
-}*/
 
-inline ImageData* BasicWindow::getImageData() const
-{
-	return imagedata;
-}
+

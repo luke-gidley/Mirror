@@ -2,11 +2,11 @@
 
 
 
-Canvas::Canvas(HINSTANCE hInstance, int width, int height, ImageData* imagedata) : BasicWindow(hInstance, width, height, imagedata)
+Canvas::Canvas(HINSTANCE hInstance, int width, int height) : BasicWindow(hInstance, width, height)
 {
 	createWindow(hInstance, width, height);
 
-
+	
 }
 
 Canvas::~Canvas()
@@ -33,10 +33,17 @@ void Canvas::onCreate() {
 
 void Canvas::onLButtonDown(UINT nFlags, int x, int y)
 {
-	getImageData()->addPoint(x, y);
-	onDraw();
+	
+	
+
 }
 void Canvas::onLButtonUp(UINT nFlags, int x, int y)
 {
 
+}
+
+void Canvas::onMouseMove(UINT nFlags, int x, int y)
+{
+	if (nFlags&MK_LBUTTON)
+		ImageData::getImageData()->addPoint(x, y);
 }

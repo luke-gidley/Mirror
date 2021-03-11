@@ -6,7 +6,7 @@ class Mirror :
     public BasicWindow
 {
 public:
-    Mirror(HINSTANCE hInstance, int width, int height, ImageData* imagedata);
+    Mirror(HINSTANCE hInstance, int width, int height);
     ~Mirror();
 
     virtual void onDraw();

@@ -1,6 +1,8 @@
 #include "ImageData.h"
 
 
+ImageData* ImageData::imagedata = nullptr;
+
 ImageData::ImageData() {
 
 }

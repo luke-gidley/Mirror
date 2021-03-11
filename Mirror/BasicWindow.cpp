@@ -1,10 +1,10 @@
 #include "BasicWindow.h"
 
 
-BasicWindow::BasicWindow(HINSTANCE hInstance, int width, int height, ImageData* imagedata) : imagedata(imagedata)
+BasicWindow::BasicWindow(HINSTANCE hInstance, int width, int height)
 {
     setImmediateDrawMode(false);
-
+    ImageData::getImageData()->registerRedrawCallback(getHWND());
 
 }
 
@@ -15,7 +15,7 @@ BasicWindow::~BasicWindow()
 
 void BasicWindow::onDraw()
 {
-    imagedata->draw(this);
+    ImageData::getImageData()->draw(this);
 
     EasyGraphics::onDraw();
 }

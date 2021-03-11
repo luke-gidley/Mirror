@@ -1,7 +1,7 @@
 #include "Mirror.h"
 
 
-Mirror::Mirror(HINSTANCE hInstance, int width, int height, ImageData* imagedata) : BasicWindow(hInstance, width, height, imagedata)
+Mirror::Mirror(HINSTANCE hInstance, int width, int height) : BasicWindow(hInstance, width, height)
 {
 	createWindow(hInstance, width, height);
 
@@ -15,9 +15,6 @@ void Mirror::onDraw() {
 
 	clearScreen(BLACK);
 	setPenColour(WHITE, 1);
-	
-
-
 	BasicWindow::onDraw();
 }
 
